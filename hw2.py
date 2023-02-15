@@ -92,3 +92,4 @@ class Villain(CosmicHero):
 villain = Villain('Psykos', 'Saikosu', 'esper', 1000, 'You lost your chance at winning./'
                 ' I was chosen as a superior entity. And I was bestowed more power than you possess.')
 print(villain.crit(airHero))
+
