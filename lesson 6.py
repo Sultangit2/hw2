@@ -1,3 +1,9 @@
+# sql-язык структур. данных
+# субд - система управлениями баз данных
+# CRUD - create reed update delete
+# noSQL
+
+
 import sqlite3
 from sqlite3 import Error
 
@@ -55,41 +61,10 @@ is_married BOOLEAN DEFAULT FALSE
 );                                                                                                                    
 '''
 
-def sql_delete_query(conn):
-    cursor = conn.cursor()
-    cursor.execute(
-        """DELETE from student where id = 4"""
-    )
-    conn.commit()
-
-def sql_change_query(conn):
-    cursor = conn.cursor()
-    cursor.execute(
-        """UPDATE student SET fullname = 'Begaiym' WHERE id  = 1"""
-    )
-    conn.commit()
-
-
-def sql_delete_query(conn):
-    cursor = conn.cursor()
-    cursor.execute(
-        """DELETE from student where id = 4"""
-    )
-    conn.commit()
-
-def sql_change_query(conn):
-    cursor = conn.cursor()
-    cursor.execute(
-        """UPDATE student SET fullname = 'Begaiym' WHERE id  = 1"""
-    )
-    conn.commit()
-
 connection = create_connection(database)
 if connection is not None:
-    #create_table(connection,sql_create_student_table)
+    # create_table(connection,sql_create_student_table)
     # create_student(connection,('Beka',0,'пишу стихи',0))
-    #create_student(connection,('ЭЭрик',110,'барабанщик',1))
+    # create_student(connection,('ЭЭрик',110,'барабанщик',1))
     reed_student(connection)
-    sql_delete_query(connection)
-    sql_change_query(connection)
-    ('мы молодцы')
+    print('мы молодцы')
